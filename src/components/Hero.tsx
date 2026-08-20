@@ -4,13 +4,11 @@ import { STUDIO_INFO } from '../data/mockData';
 
 interface HeroProps {
   onOpenConsultation: () => void;
-  onScrollToCalculator: () => void;
   onScrollToPortfolio: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({
   onOpenConsultation,
-  onScrollToCalculator,
   onScrollToPortfolio
 }) => {
   return (
@@ -52,19 +50,12 @@ export const Hero: React.FC<HeroProps> = ({
               </button>
 
               <button
-                id="hero-calculator-btn"
-                onClick={onScrollToCalculator}
-                className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-[#F3EFE9] text-[#18191B] border border-[#D5CEC5] text-sm font-semibold rounded-xs transition-all flex items-center justify-center gap-2 shadow-xs group"
-              >
-                <Calculator className="w-4 h-4 text-[#C88A58]" />
-                <span>Calculate Interior Cost</span>
-              </button>
-
-              <button
+                id="hero-consultation-btn"
                 onClick={onOpenConsultation}
-                className="w-full sm:w-auto text-xs sm:text-sm font-semibold text-[#C88A58] hover:text-[#B77948] underline underline-offset-4 py-2 text-center"
+                className="w-full sm:w-auto px-6 py-3.5 bg-[#C88A58] hover:bg-[#B77948] text-white text-sm font-semibold rounded-xs transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-2 group"
               >
-                Book Free Consultation &rarr;
+                <span>Book Free Consultation</span>
+                <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
 

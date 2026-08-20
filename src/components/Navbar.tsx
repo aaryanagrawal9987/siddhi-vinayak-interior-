@@ -25,7 +25,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenConsultation }) => {
   const navLinks = [
     { name: 'Services', href: '#services' },
     { name: 'Before & After', href: '#before-after' },
-    { name: 'Budget Calculator', href: '#budget-calculator' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Design Process', href: '#process' },
     { name: 'Vastu Design', href: '#vastu' },

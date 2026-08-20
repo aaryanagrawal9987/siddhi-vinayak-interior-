@@ -4,10 +4,9 @@ import { STUDIO_INFO, VADODARA_LOCALITIES } from '../data/mockData';
 
 interface FooterProps {
   onOpenConsultation: () => void;
-  onScrollToCalculator: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenConsultation, onScrollToCalculator }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenConsultation }) => {
   return (
     <footer className="bg-[#18191B] text-[#F9F8F6] pt-16 pb-12 border-t border-[#333]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +73,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenConsultation, onScrollToCa
             <ul className="space-y-2 text-xs text-[#D5CEC5]">
               <li><a href="#services" className="hover:text-[#C88A58] transition-colors">Design Services</a></li>
               <li><a href="#before-after" className="hover:text-[#C88A58] transition-colors">Before & After</a></li>
-              <li><a href="#budget-calculator" className="hover:text-[#C88A58] transition-colors">Cost Estimator</a></li>
               <li><a href="#portfolio" className="hover:text-[#C88A58] transition-colors">Vadodara Projects</a></li>
               <li><a href="#process" className="hover:text-[#C88A58] transition-colors">45-Day Process</a></li>
               <li><a href="#vastu" className="hover:text-[#C88A58] transition-colors">Vastu Guidelines</a></li>

@@ -8,7 +8,7 @@ export default defineConfig(() => {
     // IMPORTANT: For GitHub Pages, change this to your repository name!
     // Example: If your repo is https://github.com/username/my-portfolio
     // Change this to: base: '/my-portfolio/',
-    base: './',
+    base: '/siddhi-vinayak-interior-/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {

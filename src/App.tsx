@@ -8,7 +8,6 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { BeforeAfterSlider } from './components/BeforeAfterSlider';
-import { BudgetEstimator } from './components/BudgetEstimator';
 import { Portfolio } from './components/Portfolio';
 import { DesignProcess } from './components/DesignProcess';
 import { VastuSection } from './components/VastuSection';
@@ -24,31 +23,10 @@ export default function App() {
     source?: string;
     serviceName?: string;
     spaceType?: string;
-    style?: string;
-    area?: number;
-    estimatedMin?: number;
-    estimatedMax?: number;
   }>({});
 
   const handleOpenConsultation = (serviceName?: string) => {
     setModalPrefill(serviceName ? { serviceName } : {});
-    setIsConsultationOpen(true);
-  };
-
-  const handleBudgetQuoteModal = (details: {
-    spaceType: string;
-    style: string;
-    area: number;
-    estimatedMin: number;
-    estimatedMax: number;
-  }) => {
-    setModalPrefill({
-      spaceType: details.spaceType,
-      style: details.style,
-      area: details.area,
-      estimatedMin: details.estimatedMin,
-      estimatedMax: details.estimatedMax,
-    });
     setIsConsultationOpen(true);
   };
 
@@ -76,7 +54,6 @@ export default function App() {
         {/* 1. Hero Section */}
         <Hero
           onOpenConsultation={() => handleOpenConsultation()}
-          onScrollToCalculator={() => scrollToSection('budget-calculator')}
           onScrollToPortfolio={() => scrollToSection('portfolio')}
         />
 
@@ -85,9 +62,6 @@ export default function App() {
 
         {/* 3. Unique Feature 1: Before & After Slider */}
         <BeforeAfterSlider />
-
-        {/* 4. Unique Feature 2: Interactive Interior Cost Estimator */}
-        <BudgetEstimator onOpenQuoteModal={handleBudgetQuoteModal} />
 
         {/* 5. Filterable Portfolio Gallery & Lightbox */}
         <Portfolio onSelectProject={handleSelectPortfolioProject} />
@@ -108,7 +82,6 @@ export default function App() {
       {/* 10. Dark Slate Editorial Footer */}
       <Footer
         onOpenConsultation={() => handleOpenConsultation()}
-        onScrollToCalculator={() => scrollToSection('budget-calculator')}
       />
 
       {/* Interactive Consultation Modal */}
