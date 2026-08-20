@@ -5,6 +5,10 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // IMPORTANT: For GitHub Pages, change this to your repository name!
+    // Example: If your repo is https://github.com/username/my-portfolio
+    // Change this to: base: '/my-portfolio/',
+    base: './',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
